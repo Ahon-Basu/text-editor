@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Bengal Word Editor</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="website icon" type="image/png" href="img/font.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="tab">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">File</button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item" onclick="new_txt()">New</li>
+            <li class="dropdown-item" onclick="save()">Save</li>
+            <li class="dropdown-item" id="pdf">Save as PDF</li>
+          </ul>
+          <button class="btn btn-primary" id="home">Home</button>
+          <button class="btn btn-primary" id="add">Insert</button>
+          <hr>
+          <div class="tab-b">
+            <div id="div">
+            <select class="form-select" id="sel">
+              <option class="kal" value="Kalpurush" style="font-family: Kalpurush;">Kalpurush</option>
+              <option class="pop" value="Poppins" style="font-family: Poppins;">Poppins</option>
+              <option class="arial" value="Arial" style="font-family: Arial;">Arial</option>
+              <option class="tnr" value="Times new roman" style="font-family: Times new roman;">Times new roman</option>
+            </select>
+            <select class="form-select" id="sel1">
+              <option class="1">1</option>
+              <option class="2">2</option>
+              <option class="3">3</option>
+              <option class="4" selected="true">4</option>
+              <option class="5">5</option>
+              <option class="6">6</option>
+              <option class="7">7</option>
+            </select>
+            <input type="color" class="form-control-color" id="f_c">
+            <input type="color" class="form-control-color" id="b_c">
+            <button class="btn btn-outline-secondary" id="bold"><b>B</b></button>
+            <button class="btn btn-outline-secondary" id="italic"><i>I</i></button>
+            <button class="btn btn-outline-secondary" id="under"><u>U</u></button>
+            <button class="btn btn-outline-secondary" id="sup"><i class="fa fa-superscript"></i></button>
+            <button class="btn btn-outline-secondary" id="sub"><i class="fa fa-subscript"></i></button>
+            </div><br>
+            <div id="div">
+            <button class="btn btn-outline-secondary" id="left"><i class="fa fa-align-left"></i></button>
+            <button class="btn btn-outline-secondary" id="center"><i class="fa fa-align-center"></i></button>
+            <button class="btn btn-outline-secondary" id="right"><i class="fa fa-align-right"></i></button>
+            <button class="btn btn-outline-secondary" id="justify"><i class="fa fa-align-justify"></i></button>
+            <div class="line"></div>
+            <button class="btn btn-outline-secondary" id="order"><i class="fa fa-list-ol"></i></button>
+            <button class="btn btn-outline-secondary" id="un_order"><i class="fa fa-list-ul"></i></button>
+            <div class="line"></div>
+            <button class="btn btn-outline-secondary" id="strike"><i class="fa fa-strikethrough"></i></button>
+            </div><br>
+            <div id="div">
+            <button class="btn btn-outline-secondary" id="link"><i class="fa fa-link"></i></button>
+            <button class="btn btn-outline-secondary" id="unlink"><i class="fa fa-unlink"></i></button>
+            <div class="line"></div>
+            <button class="btn btn-outline-secondary" id="undo"><i class="fas fa-undo"></i></button>
+            <button class="btn btn-outline-secondary" id="redo"><i class="fa fa-redo"></i></button>
+            </div>
+            <div id="insert">
+              <button class="btn btn-outline-secondary" id="img_btn"><label for="pic"><i class="fa fa-image"></i></label></button>
+              <input type="file" accept="image/jpg, image/png, image/jpeg" id="pic" style="display: none;">
+              <div class="line"></div>
+              <button class="btn btn-outline-secondary" id="i_s"><i class="fa fa-table"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="word">
+          <div id="box" class="border border-secondary">
+            <div class="content" contenteditable="true" id="editor">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
