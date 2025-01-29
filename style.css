@@ -10,11 +10,11 @@
 }
 @font-face {
   font-family: Poppins;
-  src: url("font/Poppins-Medium.ttf");
+  src: url("Poppins-Medium.ttf");
 }
 @font-face {
   font-family: Kalpurush;
-  src: url("font/kalpurush.ttf");
+  src: url("kalpurush.ttf");
 }
 body {
   display: flex;
